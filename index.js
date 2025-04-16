@@ -1,10 +1,10 @@
+const exercises = new Map();
+
 function submitForm() {
   const form = document.getElementById('exercise_form');
-  console.log(form)
   form.addEventListener('submit', (event) => {
-    console.log(form)
     event.preventDefault();
-    console.log(validateForm(form));
+    validateForm(form) && addExercise(form) ? alert('Form submitted successfully!') : alert('Form submission failed!');
   });
 }
 
@@ -19,5 +19,16 @@ function validateForm(form) {
     alert('Reps must be a positive number');
     return false;
   }
+  return true;
+}
+
+function addExercise(form) {
+  const exercise = form.exercise.value;
+  const reps = form.reps.value;
+
+  exercises.set(exercise, [{ exercise: exercise, reps: parseInt(reps) }]);
+
+  console.log(exercises);
+
   return true;
 }
