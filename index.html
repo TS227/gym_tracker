@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="dist/main.css">
   <script src="index.js"></script>
 </head>
+
+
 <nav>
   <h1> Gym Tracker </h1>
   <ul>
@@ -14,11 +16,29 @@
   </ul>
 </nav>
 
+<body onload="loadExercises()">
 
-<form id='exercise_form'>
-  <label for="exercise">:</label><br>
-  <input type="text" id="exercise" name="exercise" value="Dumbell Lat Pulldowns"><br>
-  <label for="reps">Last name:</label><br>
-  <input type="number" id="reps" name="reps" value="10"><br><br>
-  <button type="submit" onclick="submitForm()"> Submit </button>
-</form>
+  <main>
+    <form id='exercise-form'>
+      <label for="exercise">Exercise</label><br>
+      <input type="text" id="exercise" name="exercise" value=""><br>
+      <label for="reps">Reps</label><br>
+      <input type="number" id="reps" name="reps"><br><br>
+      <button type="submit" onclick="submitForm()"> Submit </button>
+    </form>
+
+    <h2>Exercise Log</h2>
+
+    <div class="table-div">
+      <table>
+        <thead>
+          <tr>
+            <th>exercise</th>
+            <th>reps</th>
+          </tr>
+        </thead>
+        <tbody id="exercise-table">
+        </tbody>
+    </div>
+  </main>
+</body>

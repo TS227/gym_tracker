@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap");
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+main {
+  margin: auto;
+  width: 75%;
+}
+
 nav {
   display: flex;
   background: #2e3d4c;
@@ -9,6 +22,40 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+.table-div {
+  overflow-x: auto;
+}
+
+th,
+td {
+  padding: 3px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+td {
+  font-size: large;
+}
+
+th {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: x-large;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(242, 242, 242, 0.7058823529);
+}
+
+tbody tr:hover {
+  background-color: rgb(141, 176, 196);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 /*# sourceMappingURL=main.css.map */
